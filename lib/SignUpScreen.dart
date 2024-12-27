@@ -1,5 +1,6 @@
 import 'package:ecommerce/SignUpScreen.dart';
 import 'package:ecommerce/home_screen.dart';
+import 'package:ecommerce/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -24,13 +25,46 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: "Enter Email",
+                    labelText: "Enter Name",
                     border: OutlineInputBorder(),
                    
-                    prefixIcon: Icon(Icons.email),
+                    prefixIcon: Icon(Icons.person),
                   ),
                 ),
                 SizedBox(
+                  height: 15,
+                ),
+                TextFormField(
+                 
+                  obscureText: true,
+                  
+                  decoration: InputDecoration(
+                    
+                      labelText: "Enter Email",
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.email),
+                      ),
+                      
+                ),
+
+                 SizedBox(
+                  height: 15,
+                ),
+                TextFormField(
+                 
+                  obscureText: true,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    
+                      labelText: "Enter Number",
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.numbers),
+                      ),
+                      
+                ),
+
+
+                 SizedBox(
                   height: 15,
                 ),
                 TextFormField(
@@ -46,15 +80,23 @@ class SignUpScreen extends StatelessWidget {
                       
                 ),
 
-                  // Align(
-                  //   alignment: Alignment.bottomRight,
-                  //   child: TextButton(onPressed: (){}, 
-                  // child: Text('Forgot password',
-                  // style: TextStyle(
-                  //   color: Colors.blue,
-                  // ),) ),
-                  // ),
+                 SizedBox(
+                  height: 15,
+                ),
+                TextFormField(
+                 
+                  obscureText: true,
+                  
+                  decoration: InputDecoration(
+                    
+                      labelText: "Confirm Password",
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.lock),
+                      suffixIcon: Icon(Icons.remove_red_eye)),
+                      
+                ),
 
+              
                 SizedBox(
                   height: 0,
                 ),
@@ -74,7 +116,7 @@ class SignUpScreen extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         )),
-                        child: Text("Let's shop",
+                        child: Text("Create Account",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
@@ -90,14 +132,14 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUpScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
                   },
                   style: TextButton.styleFrom(
                       splashFactory: NoSplash.splashFactory,
                       padding: EdgeInsets.all(0)),
                   child: Text(
                     'Log in ',
-                    style: TextStyle(color: Colors.blue),
+                    style: TextStyle(color: Color(0xFFEF6969), fontSize: 17, fontWeight: FontWeight.bold, ),
                   ),
                 ),
               ],

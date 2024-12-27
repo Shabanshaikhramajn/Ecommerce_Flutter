@@ -71,7 +71,7 @@ class OnboardingScreen extends StatelessWidget {
         )
       ],
       showSkipButton: true,
-      showDoneButton: true,
+      showDoneButton: false,
       showBackButton: false,
       back: Text(
         "Back",
