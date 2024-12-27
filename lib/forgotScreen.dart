@@ -1,3 +1,4 @@
+import 'package:ecommerce/OTPScreen.dart';
 import 'package:ecommerce/recovery_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -99,7 +100,20 @@ TextEditingController  emailController = TextEditingController();
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         )),
-          )
+          ),
+
+          SizedBox(height: 10,),
+
+              Text(('OR')),
+
+              TextButton(onPressed: (){
+
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> OtpScreen()));
+
+              }, 
+              child: Text('Verify using number',style: 
+              TextStyle(color: Color(0xFFEF6969),
+              fontSize: 17),),)
             
 
             ],

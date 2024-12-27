@@ -1,3 +1,4 @@
+import 'package:ecommerce/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,7 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
 
           ,SizedBox(height: 50,),
 
-            Text("Please enter email address. you will receive a link to create or set a new password viewa email",
+            Text("Please Enter Details",
             style: TextStyle(
               fontSize: 15
             ), ),
@@ -59,9 +60,42 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
                 
               },
               decoration: InputDecoration(
-                labelText: "Enter your email",
+                labelText: "Enter Recovery code",
                 border: OutlineInputBorder( ),
-                prefixIcon: Icon(Icons.email),
+                prefixIcon: Icon(Icons.numbers),
+                suffix: InkWell(
+                  onTap: (){
+                    setState(() {
+                      // emailController.clear();
+                      // print(emailController);
+                    });
+                  },
+                  child: Icon(CupertinoIcons.multiply, color: Colors.grey,))
+
+
+              ),
+
+            ),
+
+            SizedBox(height: 20,),
+
+            TextFormField(
+              onChanged: (val){
+                if(val != ""){
+                  setState(() {
+                    // clrButton = true;
+                  });
+                }
+                else{
+
+                }
+                
+              },
+              decoration: InputDecoration(
+                labelText: "Enter New Password",
+                border: OutlineInputBorder( ),
+                prefixIcon: Icon(Icons.lock),
+                suffixIcon: Icon(Icons.remove_red_eye),
                 suffix: InkWell(
                   onTap: (){
                     setState(() {
@@ -77,10 +111,45 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
             ),
 
 
+SizedBox(height: 20,),
+
+            TextFormField(
+              onChanged: (val){
+                if(val != ""){
+                  setState(() {
+                    // clrButton = true;
+                  });
+                }
+                else{
+
+                }
+                
+              },
+              decoration: InputDecoration(
+                labelText: "Confirm Password",
+                border: OutlineInputBorder( ),
+                prefixIcon: Icon(Icons.lock),
+                suffixIcon: Icon(Icons.remove_red_eye),
+                suffix: InkWell(
+                  onTap: (){
+                    setState(() {
+                      // emailController.clear();
+                      // print(emailController);
+                    });
+                  },
+                  child: Icon(CupertinoIcons.multiply, color: Colors.grey,))
+
+
+              ),
+
+            ),
+
+
+
           SizedBox(height: 20,),
           ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=> RecoveryScreen()));
-          }, child: Text('Send Email', style: TextStyle(color: Colors.white),),
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeScreen()));
+          }, child: Text('Sign In', style: TextStyle(color: Colors.white),),
           
           style:   ElevatedButton.styleFrom(
             
