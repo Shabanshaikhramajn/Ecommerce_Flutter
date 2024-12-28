@@ -1,3 +1,4 @@
+import 'package:ecommerce/Screens/NavigationScreen.dart';
 import 'package:ecommerce/Screens/SignUpScreen.dart';
 import 'package:ecommerce/Screens/forgotScreen.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +64,7 @@ class LoginScreen extends StatelessWidget {
                           // For now, let's just navigate to a placeholder screen
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => LoginScreen()), 
+                            MaterialPageRoute(builder: (context) => NavigationScreen()), 
                           );
                         },
                         style: ElevatedButton.styleFrom(
