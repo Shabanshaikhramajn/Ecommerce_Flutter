@@ -128,7 +128,7 @@ int num = 1;
                 ),)
               ],
              ),
-             SizedBox(height: 40,),
+             SizedBox(height: 0,),
 
 
              InkWell(

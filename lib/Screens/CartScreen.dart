@@ -54,7 +54,7 @@ List reviews = [
 
 
 body: SingleChildScrollView(
-  child: Padding(padding: EdgeInsets.all(20),
+  child: Padding(padding: EdgeInsets.all(0),
   child: Column(
     children: [
       Container(
@@ -68,86 +68,107 @@ body: SingleChildScrollView(
       
       itemBuilder: (context, index) {
         return Container(
-          margin: EdgeInsets.symmetric(vertical: 15),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Checkbox(value: true,
-              activeColor: Color(0xFFEF6969),
-               onChanged: (val){}),
-               ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.asset(
-                  imageList[index],
-                  height: 80,
-                  width: 80,
-                  fit: BoxFit.cover,
-                ),
-               ),
-               Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(productTitles[index],
-                  style: TextStyle(
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 19
+          margin: EdgeInsets.symmetric(vertical: 10),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(0,0,0,0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Checkbox(value: true,
+                activeColor: Color(0xFFEF6969),
+                 onChanged: (val){}),
 
-                  ),
-                  ),
-                  SizedBox(height: 10,),
-                  Text("Hoaded Jacket",
-                  style: TextStyle(
-                    color: Colors.black45,
-                    fontSize: 16
-                  ),),
-                  SizedBox(height: 10,),
-                  Text(prices[index],
-                  style: TextStyle(
-                    color: Color(0xFFEF6969),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18
-                  ),)
-
-                ],
-               ),
-               Row(
-                children: [
-                  Icon(CupertinoIcons.minus, 
-                  color: Colors.black,),
-                  SizedBox(width: 20,),
-                  Text( "1",
-                  style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold )),
-                  SizedBox(width: 20,),
-                  Icon(CupertinoIcons.plus,
-                  color: Colors.black, )
-                ],
-               )
-
-            ],
+                 Padding(
+                   padding: const EdgeInsets.only(left: 0),
+                   child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      imageList[index],
+                      height: 80,
+                      width: 80,
+                      fit: BoxFit.cover,
+                    ),
+                   ),
+                 ),
+                 Padding(
+                   padding: const EdgeInsets.only(left: 10),
+                   child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0,5,0,0),
+                        child: Text(productTitles[index],
+                        style: TextStyle(
+                          
+                          color: Colors.black87,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16
+                        
+                        ),
+                        ),
+                      ),
+                      SizedBox(height: 0,),
+                      Text("Hoaded Jacket",
+                      style: TextStyle(
+                        color: Colors.black45,
+                        fontSize: 14
+                      ),),
+                      SizedBox(height: 10,),
+                      Text(prices[index],
+                      style: TextStyle(
+                        color: Color(0xFFEF6969),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18
+                      ),)
+                               
+                    ],
+                   ),
+                 ),
+                 Padding(
+                   padding: const EdgeInsets.only(left: 15),
+                   child: Row(
+                    children: [
+                      Icon(CupertinoIcons.minus, 
+                      color: Colors.black,),
+                      SizedBox(width: 15,),
+                      Text( "1",
+                      style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold )),
+                      SizedBox(width: 15,),
+                      Icon(CupertinoIcons.plus,
+                      color: Colors.black, )
+                    ],
+                   ),
+                 )
+            
+              ],
+            ),
           ),
         );
       })
         ),
         SizedBox(height: 0,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Select All",
-            style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold
-            ),),
-            Checkbox(
-              splashRadius: 20,
-              activeColor: Color(0xFFEF6969),
-              value: true
-              , onChanged: (val){})
-          ],
+        Padding(
+          padding: const EdgeInsets.only(left: 10, right: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Select All",
+              style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold
+              ),),
+              Checkbox(
+                splashRadius: 20,
+                activeColor: Color(0xFFEF6969),
+                value: true
+                , onChanged: (val){})
+            ],
+          ),
         ),
         Divider(
           height: 20,
@@ -155,20 +176,23 @@ body: SingleChildScrollView(
           color: Colors.black,
         ),
         SizedBox(height: 8,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Total Payment",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),),
-             Text("\$400",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),)
-          ],
+        Padding(
+          padding: const EdgeInsets.only(left: 10, right: 12),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Total Payment",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),),
+               Text("\$400",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),)
+            ],
+          ),
         ),
         SizedBox(height: 20,),
         InkWell(
@@ -176,7 +200,7 @@ body: SingleChildScrollView(
             Navigator.push(context, MaterialPageRoute(builder: (context)=> PaymentMethodScreen()));
           },
           child: ContainerButtonModel(itext: "Checkout",
-            containerWith: MediaQuery.of(context).size.width,
+            containerWith: MediaQuery.of(context).size.width/1.1,
             bgColor: Color(0xFFEF6969),
 
           

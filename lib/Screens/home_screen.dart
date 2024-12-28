@@ -311,7 +311,7 @@ List reviews = [
                     physics: NeverScrollableScrollPhysics(),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: .65,
+                      childAspectRatio: .6,
                       // crossAxisSpacing: 30,
         
                       ),

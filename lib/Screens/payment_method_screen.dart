@@ -1,3 +1,4 @@
+import 'package:ecommerce/widgets/container_button.dart';
 import 'package:flutter/material.dart';
 
 class PaymentMethodScreen extends StatefulWidget {
@@ -222,8 +223,120 @@ body: SafeArea(
                 ],
               ),
             ),
-          )
+          ),
+          SizedBox(height: 100,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Sub- total",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey
+                ),
+              ),
+
+             Text(
+                "\$400.00",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey
+                ),
+              ),
+
+            ],
+          ),
         
+        SizedBox(height: 20,),
+         Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Shipping fee",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black54
+                ),
+              ),
+
+             Text(
+                "\$8.00",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black54
+                ),
+              ),
+
+            ],
+          ),
+  SizedBox(height: 20,),
+         Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Tax",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black54
+                ),
+              ),
+
+             Text(
+                "\$32.00",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black54
+                ),
+              ),
+
+            ],
+          ),
+
+          Divider(
+            height: 30,
+            thickness: 1,
+            color: Colors.black,
+
+          ),
+          SizedBox(height: 20,),
+
+              Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Total",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black54
+                ),
+              ),
+
+             Text(
+                "\$440.00",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black54
+                ),
+              ),
+
+            ],
+          ),
+          SizedBox(height: 70,),
+          InkWell(
+            onTap: (){},
+            child: ContainerButtonModel(
+              itext: "confirm payment"),
+              containerWidth: 
+          )
+
         ],
       ),
     ),
