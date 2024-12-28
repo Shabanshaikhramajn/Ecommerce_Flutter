@@ -108,17 +108,17 @@ List<String> images = [
                         ),
                       ),
               ),
-                 SizedBox(height: 10,),
+                 SizedBox(height: 13,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
-                          height: 60,
-                          width: 60,
+                          height: 50,
+                          width: 50,
                           decoration: BoxDecoration(
                             color: Color(0xF989797),
                             borderRadius: BorderRadius.circular(
-                              30
+                              18
                             ),
                             
                           ),
@@ -126,10 +126,11 @@ List<String> images = [
                             child: Icon(Icons.shopping_cart,
                             color: Color(0xFFEF6969),),
                           ),
-                        )
+                        ),
+                          ProductDetailsPopup(),
                       ],
                     ),
-                    ProductDetailsPopup(),
+                  
              
               ],
         ),
