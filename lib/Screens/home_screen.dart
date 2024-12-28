@@ -1,4 +1,5 @@
 import 'package:ecommerce/Screens/onboarding_screen.dart';
+import 'package:ecommerce/Screens/product_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -197,12 +198,14 @@ List reviews = [
                             height: 180,
                             child: Stack(
                               children: [InkWell(
-                                onTap: (){},
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductScreen()));
+                                },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8),
                                  child: Image.asset(imageList[index],
                                  fit: BoxFit.cover,
-                                 width: 150, height: 180,),
+                                 width: 180, height: 180,),
                                  
                                 ),
                               ),
@@ -260,7 +263,7 @@ List reviews = [
                         ),
 
                         Row(
-                              
+
                         children: [
                           Icon(Icons.star, color: Colors.amber,),
                           Text(
@@ -299,6 +302,8 @@ List reviews = [
                       fontWeight: FontWeight.bold
                     ),),
                   ),
+
+
                   SizedBox(height: 20,),
                   GridView.builder(
                     itemCount: productTitles.length,
@@ -306,8 +311,8 @@ List reviews = [
                     physics: NeverScrollableScrollPhysics(),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: .6,
-                      crossAxisSpacing: 2,
+                      childAspectRatio: .65,
+                      // crossAxisSpacing: 30,
         
                       ),
                       itemBuilder: (context, index){
@@ -315,7 +320,7 @@ List reviews = [
 
 
                         return Container(
-                      margin: EdgeInsets.only(right: 15),
+                            width: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -325,24 +330,24 @@ List reviews = [
                             height: 200,
                             child: Stack(
                               children: [InkWell(
-                                onTap: (){},
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ProductScreen()));
+                                },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8),
                                  child: Image.asset(imageList[index],
-                                 fit: BoxFit.cover,
+                                 fit: BoxFit.cover, 
+                                 width: 180,
+                                 height: 200,
                                ),
                                  
                                 ),
                               ),
                               
-                           
-                          
-                          
-                          Positioned(
+                           Positioned(
                             right: 10,
                           top: 10,
-        
-                            child: Container(
+                             child: Container(
                               height: 30,
                               width: 30,
                               decoration: BoxDecoration(
@@ -361,7 +366,7 @@ List reviews = [
                        
                        ),
         
-                       SizedBox(height: 10,),
+                       SizedBox(height:8,),
                        Text(
                         
                         productTitles[index],
@@ -373,7 +378,7 @@ List reviews = [
                        ),
         
                        SizedBox(height: 10,),
-                       Column(
+                       Row(
                         children: [
                           Icon(Icons.star, color: Colors.amber,),
                           Text(
