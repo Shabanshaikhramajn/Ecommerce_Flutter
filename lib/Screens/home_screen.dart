@@ -10,6 +10,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+List<String> categories = ['ALL', 'Category', 'Recommended','Recommended', 'fsjfoi', 'sfijdsofjdso','ffdsjfso','dsfjoisf'];
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,10 +87,56 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 150,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              color: Color(0xFFFF0DD),
-              borderRadius: BorderRadius.circular(20)
+              color: Color.fromARGB(15, 255, 94, 0),
+              borderRadius: BorderRadius.circular(20),
+          
+
+
+          
             ),
-          )
+            child: Image.asset('assets/freed.png'),
+
+          ),
+
+          SizedBox(height: 9,),
+
+          SizedBox(height: 50,
+          child: ListView.builder(
+            shrinkWrap: true,
+            scrollDirection:Axis.horizontal,
+            itemCount: categories.length,
+
+
+            
+            
+            itemBuilder:(context, index) {
+              return FittedBox(
+                child: Container(
+                  height: 40,
+                  margin: EdgeInsets.all(8),
+                  padding: EdgeInsets.only(left: 15,right: 15),
+                  decoration: BoxDecoration(
+                    color: Colors.black12.withOpacity(0.05),
+                    borderRadius: BorderRadius.circular(20)
+
+                  ),
+                  child: 
+                  Center(
+                    child: FittedBox(
+                      child: Text(
+                        categories[index],
+                        style: TextStyle(
+                          color: Colors.black38,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              );
+            } ),
+            )
 
 
         ],
@@ -94,3 +146,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+
+
+
+// 1.12

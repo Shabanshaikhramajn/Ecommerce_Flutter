@@ -39,6 +39,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
         
         backgroundColor: Color(0xFFEF6969),
         foregroundColor: Colors.white,
+        shape: const CircleBorder(),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
