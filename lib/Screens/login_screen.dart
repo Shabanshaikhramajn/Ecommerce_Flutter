@@ -1,5 +1,5 @@
-import 'package:ecommerce/SignUpScreen.dart';
-import 'package:ecommerce/forgotScreen.dart';
+import 'package:ecommerce/Screens/SignUpScreen.dart';
+import 'package:ecommerce/Screens/forgotScreen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {

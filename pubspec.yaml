@@ -35,6 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   introduction_screen: ^3.0.0
+  # sms_otp_auto_verify: ^2.0.0
+  animated_bottom_navigation_bar: ^1.3.3
+
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,5 @@
-import 'package:ecommerce/OTPScreen.dart';
-import 'package:ecommerce/recovery_screen.dart';
+import 'package:ecommerce/Screens/OTPScreen.dart';
+import 'package:ecommerce/Screens/recovery_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

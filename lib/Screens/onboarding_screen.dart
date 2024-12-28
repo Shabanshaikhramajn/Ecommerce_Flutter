@@ -1,5 +1,5 @@
-import 'package:ecommerce/home_screen.dart';
-import 'package:ecommerce/login_screen.dart';
+import 'package:ecommerce/Screens/home_screen.dart';
+import 'package:ecommerce/Screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -29,7 +29,8 @@ class OnboardingScreen extends StatelessWidget {
             image: Image.asset(
               'assets/splash1.png',
               width: 200,
-            )),
+              
+            ),),
         PageViewModel(
             title: 'Shop Now',
             body:

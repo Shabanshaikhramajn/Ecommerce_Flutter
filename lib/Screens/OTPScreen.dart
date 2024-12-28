@@ -1,4 +1,5 @@
-import 'package:ecommerce/recovery_screen.dart';
+import 'package:ecommerce/Screens/OtpVerify.dart';
+import 'package:ecommerce/Screens/recovery_screen.dart';
 import 'package:flutter/material.dart';
 
 class OtpScreen extends StatefulWidget {
@@ -48,7 +49,7 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
               SizedBox(height: 20,),
                     ElevatedButton(onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> RecoveryScreen()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> Otpverify()));
 
                     }, 
                     child: 
@@ -59,6 +60,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       backgroundColor: Color(0xFFEF6969),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
+                        
                         
                       )
                     ),

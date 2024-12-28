@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:ecommerce/home_screen.dart';
-import 'package:ecommerce/onboarding_screen.dart';
+import 'package:ecommerce/Screens/home_screen.dart';
+import 'package:ecommerce/Screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 

@@ -1,4 +1,6 @@
-import 'package:ecommerce/splash_screen.dart';
+import 'package:ecommerce/Screens/NavigationScreen.dart';
+import 'package:ecommerce/Screens/onboarding_screen.dart';
+import 'package:ecommerce/Screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget{
       ),
 
 
-    home: SplashScreen(),
+    home: NavigationScreen(),
 
     );
   }

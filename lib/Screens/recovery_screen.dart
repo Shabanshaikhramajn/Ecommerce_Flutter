@@ -1,4 +1,4 @@
-import 'package:ecommerce/home_screen.dart';
+import 'package:ecommerce/Screens/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
