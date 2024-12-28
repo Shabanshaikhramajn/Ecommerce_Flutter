@@ -178,15 +178,17 @@ List reviews = [
               Container(
                   
                   color: Colors.white,
-                  height: 300,
+                  height: 190,
                   child: ListView.builder(
                     itemCount: imageList.length,
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                     return Container(
+                        height: 50,
+                      color: Colors.transparent,
                       margin: EdgeInsets.only(right: 15),
-                      child: Column(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
         
@@ -231,25 +233,40 @@ List reviews = [
                        
                        ),
         
-                       SizedBox(height: 10,),
+                       SizedBox(height: 10, width: 18,),
+                       Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                       children: [ 
+                       
                        Text(
                         
                         productTitles[index],
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-        
+                               
                         ),
                        ),
-        
-                       SizedBox(height: 10,),
-                       Row(
+                               
+                       SizedBox(height: 8,),
+                       
+                        SizedBox(
+                          width: 130,
+                       
+                          child: Text('a garment for the upper body usually having a front opening, collar, lapels, sleeves, and pockets.',
+                          maxLines: 6,                    
+                          overflow: TextOverflow.ellipsis,
+                                                 ),
+                        ),
+
+                        Row(
+                              
                         children: [
                           Icon(Icons.star, color: Colors.amber,),
                           Text(
                            '('+ reviews[index]+ ')'
                           ),
-                          SizedBox(height: 10, width: 8,),
+                          SizedBox(height: 10, width: 10,),
                           Text(
                             prices[index],
                             style: TextStyle(
@@ -259,8 +276,10 @@ List reviews = [
                             ),
                           )
                         ],
+                       ),
+                       
+                       ]
                        )
-        
         
                         ],
                       ),
@@ -354,7 +373,7 @@ List reviews = [
                        ),
         
                        SizedBox(height: 10,),
-                       Row(
+                       Column(
                         children: [
                           Icon(Icons.star, color: Colors.amber,),
                           Text(
