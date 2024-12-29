@@ -1,3 +1,4 @@
+import 'package:ecommerce/Screens/shipping_address.dart';
 import 'package:ecommerce/widgets/container_button.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +47,7 @@ body: SafeArea(
     child: Center(
       child: Column(
         children: [
-          SizedBox(height: 40,),
+          SizedBox(height: 10,),
           Container(
             width: size.width,
             height: 55,
@@ -224,7 +225,7 @@ body: SafeArea(
               ),
             ),
           ),
-          SizedBox(height: 100,),
+          SizedBox(height: 20,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -331,10 +332,18 @@ body: SafeArea(
           ),
           SizedBox(height: 70,),
           InkWell(
-            onTap: (){},
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> ShippingAddress()));
+            },
             child: ContainerButtonModel(
-              itext: "confirm payment"),
-              containerWidth: 
+              itext: "confirm payment",
+              bgColor: Color(0xFFEF6969),
+              containerWith: size.width,
+              
+              
+              ),
+           
+
           )
 
         ],
